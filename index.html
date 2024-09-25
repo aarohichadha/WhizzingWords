@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+    <link rel="shortcut icon" href="whizz.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Whizzing Words</h1>
+
+        <!-- Difficulty Selection -->
+        <div id="difficulty-selection">
+            <h3>Select Difficulty:</h3>
+            <button onclick="selectDifficulty('easy')">Easy</button>
+            <button onclick="selectDifficulty('medium')">Medium</button>
+            <button onclick="selectDifficulty('hard')">Hard</button>
+        </div>
+
+        <!-- Word Domain Selection -->
+        <div id="domain-selection" class="hidden">
+            <h3>Select a domain:</h3>
+            <button onclick="selectDomain('easy', 'fruits')">Fruits</button>
+            <button onclick="selectDomain('easy', 'animals')">Animals</button>
+            <button onclick="selectDomain('easy', 'colors')">Colors</button>
+            <button onclick="selectDomain('medium', 'countries')">Countries</button>
+            <button onclick="selectDomain('medium', 'currencies')">Currencies</button>
+            <button onclick="selectDomain('medium', 'political parties')">Political Parties (India)</button>
+            <button onclick="selectDomain('hard', 'oceans')">Oceans</button>
+            <button onclick="selectDomain('hard', 'instruments')">Instruments</button>
+            <button onclick="selectDomain('hard', 'engineering roles')">Engineering Roles</button>
+        </div>
+
+        <!-- Game UI -->
+        <div id="game-ui" class="hidden">
+            <p class="question" id="question"></p>
+            <p class="word" id="word"></p>
+            <div class="controls">
+                <span id="timer">Time left: 30</span>
+                <span id="sound-icon" onclick="toggleSound()">🔈</span>
+                <button id="hint-btn" onclick="giveHint()">Hint</button>
+            </div>
+            <div class="letter-buttons" id="letter-buttons"></div>
+            <button id="reset" onclick="startNewGame()">Start New Game</button>
+            <p class="attempts">Attempts left: <span id="attempts"></span></p>
+        </div>
+    </div>
+    <audio id="background-music" src="music.ogg" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>

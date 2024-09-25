@@ -1,0 +1,87 @@
+:root {
+    --color1: #ede0d4;
+    --color2: #e6ccb2;
+    --color3: #ddb892;
+    --color4: #b08968;
+    --color5: #7f5539;
+    --color6: #9c6644;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color1);
+    background-image: url('bg.png');
+    color: var(--color6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--color2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--color5);
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--color5);
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: var(--color3);
+    color: var(--color6);
+    border: 2px solid var(--color5);
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: var(--color4);
+    color: white;
+}
+
+#word {
+    font-size: 2em;
+    letter-spacing: 10px;
+    margin: 20px 0;
+    color: var(--color4);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    #word {
+        font-size: 1.5em;
+        letter-spacing: 5px;
+    }
+}
